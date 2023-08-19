@@ -2,8 +2,10 @@
   "name": "hexchess-backend",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/main.js",
   "scripts": {
+    "start": "tsc && node dist/main.js",
+    "lint": "eslint . --ext .ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,6 +21,9 @@
   "homepage": "https://github.com/zai11/HexChess-Backend#readme",
   "devDependencies": {
     "@types/express": "file:.17.1",
+    "@typescript-eslint/eslint-plugin": "^6.4.0",
+    "@typescript-eslint/parser": "^6.4.0",
+    "eslint": "^8.47.0",
     "typescript": "^5.1.6"
   },
   "dependencies": {
