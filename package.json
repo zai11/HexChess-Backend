@@ -1,0 +1,27 @@
+{
+  "name": "hexchess-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zai11/HexChess-Backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zai11/HexChess-Backend/issues"
+  },
+  "homepage": "https://github.com/zai11/HexChess-Backend#readme",
+  "devDependencies": {
+    "@types/express": "file:.17.1",
+    "typescript": "^5.1.6"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
