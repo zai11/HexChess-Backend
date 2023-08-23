@@ -4,11 +4,17 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
+const users_1 = __importDefault(require("./routes/users"));
+var bodyParser = require('body-parser');
 const app = (0, express_1.default)();
-const port = 5501;
+const port = 5001;
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 app.get('/', (req, res) => {
     res.send('Hello World');
 });
+console.log(users_1.default);
+(0, users_1.default)(app);
 app.listen(port, () => {
     return console.log(`Express is listening at http://localhost:${port}`);
 });
