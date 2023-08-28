@@ -1,5 +1,6 @@
 import express from 'express'
 import userRoutes from './routes/users'
+import registerRoutes from './routes/register'
 
 var bodyParser = require('body-parser')
 
@@ -12,8 +13,6 @@ app.use(bodyParser.json());
 app.get('/', (req, res) => {
     res.send('Hello World');
 });
-
-console.log(userRoutes);
 
 userRoutes(app);
 

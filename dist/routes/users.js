@@ -34,7 +34,13 @@ function userRoutes(app) {
             res.send(JSON.stringify("{'success': 'true'}"));
         })
             .catch((err) => {
-            res.send(JSON.stringify("{ success: false, err: '" + err + "'}"));
+            console.log(err.constraint);
+            if (err.constraint === 'unique_username')
+                res.send(JSON.stringify("{ success: false, err: 'That username is already taken. Please try again.'}"));
+            else if (err.constraint === 'unique_email')
+                res.send(JSON.stringify("{ success: false, err: 'That email is already taken. Please try again.'}"));
+            else
+                res.send(JSON.stringify("{ success: false, err: '" + err + "'}"));
         });
     }));
 }

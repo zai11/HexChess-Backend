@@ -13,7 +13,6 @@ app.use(bodyParser.json());
 app.get('/', (req, res) => {
     res.send('Hello World');
 });
-console.log(users_1.default);
 (0, users_1.default)(app);
 app.listen(port, () => {
     return console.log(`Express is listening at http://localhost:${port}`);
