@@ -6,10 +6,12 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const users_1 = __importDefault(require("./routes/users"));
 var bodyParser = require('body-parser');
+const cors = require('cors');
 const app = (0, express_1.default)();
 const port = 5001;
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+app.use(cors());
 app.get('/', (req, res) => {
     res.send('Hello World');
 });
